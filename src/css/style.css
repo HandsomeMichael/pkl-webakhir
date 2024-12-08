@@ -1,0 +1,368 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ======================[ Tobrut Baik CSS ]========================= */
+
+:root
+{
+
+    --clr-white: #ffffff;
+    --clr-gray: #2e2d35;
+    --clr-grayer: #1b1a20;
+}
+
+*
+{
+    color: var(--clr-white);
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+p
+{
+    font-size: 14px;
+    font-weight:normal;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: #000429;
+    overflow-x: hidden;
+}
+
+
+.bg-sub {background-color: var(--clr-grayer);}
+
+/* Navbar */
+
+.kucit-navbar
+{
+
+    /* index gotta be on top with anything */
+    z-index: 999;
+
+    /* absolute position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* display setup */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Put your styles here */
+
+    backdrop-filter: blur(20px); 
+    /* background-color: var(--clr-main); */
+    transition: all .50s ease;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* height: 50px; */
+
+    background-color: var(--rgb-fade-gray);
+
+}
+
+.kucit-navbar.toggled
+{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+.kucit-navbar ul
+{
+    display: flex;
+}
+
+.front-img
+{
+    width: 200px;
+    height: 450px;
+    background-color: #2e2d35;    
+    background-size: cover;
+    /* we will try moving these  */
+    background-position-x: var(--offset-posX);
+    background-position-y: var(--offset-posY);
+    transition: background-position 0.05s ease-in-out;
+
+    border-radius: 8px;
+    box-shadow: 0 0 5px #000000;
+}
+
+/* Random shit */
+
+.random-strip
+{
+  position: absolute;
+  width: 110%;
+  height: 200px;
+  background-color: #000747;
+  transform: rotate(5deg) translateY(50px);
+  z-index: -1;
+}
+
+.random-strip-2
+{
+    position: absolute;
+    width: 110%;
+    height: 50px;
+    background-color: #000747;
+    transform: rotate(5deg) translateY(200px);
+    z-index: -1;
+}
+
+.blueball {
+    position: absolute;
+    z-index: -1;
+    width: 0; /* Default size, overridden by JavaScript */
+    height: 0; /* Default size, overridden by JavaScript */
+    background: radial-gradient(circle, transparent 0%, transparent 70%); /* Placeholder */
+    border-radius: 50%; /* Circular shape */
+    transition: all 0.3s ease; /* Smooth resizing or animation */
+}
+
+  
+
+@keyframes ripple-effect {
+    0% , 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+  }
+
+/* text */
+
+.bigasstext1
+{
+    font-size: 4.5rem;
+    font-weight: bold;
+    line-height: 10%;
+}
+
+.bigasstext2
+{
+    
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #ffffff;
+}
+
+.bigasstextdesc
+{
+    width: 350px;
+    font-size: 14px;
+    font-weight:normal;
+}
+
+/* buttong  */
+
+.buttong-starter
+{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttong {
+    width: 6rem;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    padding: 8px 16px;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .buttong:hover {
+    background-color: #2a62ff;
+    border-radius: 25px;
+    color: white;
+    padding: 8px 16px;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  /* Animation ahh */
+
+[data-animation] {
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
+}
+
+/* Fade-in animation */
+[data-animation="fade-in"] {
+    transform: translateY(80px);
+}
+[data-animation="fade-in"].appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide-in animation */
+[data-animation="slide-in"] {
+    transform: translateX(-30px);
+}
+[data-animation="slide-in"].appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide-in animation */
+[data-animation="slide-down"] {
+    transform: translateY(-300px);
+}
+[data-animation="slide-down"].appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Zoom-in animation */
+[data-animation="zoom-in"] {
+    transform: scale(0.5);
+}
+[data-animation="zoom-in"].appear {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Rotate-in animation */
+[data-animation="rotate-in"] {
+    transform: rotate(-90deg);
+}
+[data-animation="rotate-in"].appear {
+    opacity: 1;
+    transform: rotate(0);
+}
+
+/* Cursor */
+
+.cursor {
+    z-index: 999;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    z-index: 999;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.9);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.8);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+/* Some  anim */
+
+.swipe-down-4s
+{
+    animation: swipeDown 4s forwards;
+}
+
+.swipe-down-2s
+{
+    animation: swipeDown 2s forwards;
+}
+
+.swipe-right-2s
+{
+    animation: swipeRight 2s forwards;
+}
+
+.swipe-right-4s
+{
+    animation: swipeRight 4s forwards;
+}
+
+.swipe-right-6s
+{
+    animation: swipeRight 6s forwards;
+}
+
+@keyframes swipeRight {
+    0%
+    {
+        transform: translateX(-25px);
+        opacity: 0;
+    }
+    100% 
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes swipeDown {
+    0%
+    {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    100% 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,49 @@
+
+Kucit lib documentation
+
+Contents :
+
+0. Syntax
+1. Margins and Padding
+2. Flexboxes
+3. Texts
+
+==============
+
+0. Syntax
+
+a style is defined by 
+
+"basestyle"-"parameter1"-"parameter2"
+
+each code breakage uses strip "-"
+
+
+1 . Margins and Padding
+
+to make a margin you have to use the keyword "m" followed 
+with custom or direct margin pixel
+
+examples :
+
+<div class = "m-10"> this will have 10px margin anywhere </div>
+<div class = "m-top-100"> this will have 100px margin top  </div>
+<div class = "m-right-10"> this will have 10px margin right  </div> 
+
+This applies to padding as well 
+the keyword for padding is "p"
+
+2 . Flexboxes
+
+flexboxes are containers of elements
+
+
+
+
+
+
+
+
+
+
+

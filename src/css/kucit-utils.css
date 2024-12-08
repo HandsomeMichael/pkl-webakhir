@@ -1,0 +1,293 @@
+
+/*  */
+
+.border-smooth
+{
+    border-radius: 25px;
+}
+
+/* Filters */
+
+.filterbg-blur-5 , .filterbg-blur {backdrop-filter: blur(5);}
+.filter-blur-10 {backdrop-filter: blur(10);}
+.filter-blur-20 {backdrop-filter: blur(20);}
+
+.filter-blur-5 , .filter-blur {filter: blur(5);}
+.filter-blur-10 {filter: blur(10);}
+.filter-blur-20 {filter: blur(20);}
+
+/* Displays */
+
+.text-nodecor
+{
+    text-decoration: none;
+    text-decoration-style: none;
+}
+
+.text-noline
+{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.text-noheight
+{
+    line-height: 0%;
+}
+
+.text-hero {font-size: 3em;}
+.text-hero2 {font-size: 6em;}
+.text-small {font-size: 0.5em;}
+.text-small2 {font-size: 0.25em;}
+
+.text-center {text-align: center;}
+.text-justify {text-align: justify;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+
+/*
+
+Note to myself when centering shit
+
+direction row means - left right
+direction column means - up down
+
+main axis is the main direction
+cross axis is the second direction
+
+justify-content                      :   Controls the alignment of all items on the main axis.
+align-items                             :   Controls the alignment of all items on the cross axis.
+align-self                               :   Controls the alignment of an individual flex item on the cross axis.
+align-content                          :  Controls the space between flex lines on the cross axis.
+gap, column-gap, and row-gap :  Used to create gaps or gutters between flex items.
+
+*/
+
+.gap-50{gap: 50px;}
+.gap-40{gap: 40px;}
+.gap-30{gap: 30px;}
+
+.gap-20{gap: 20px;}
+.gap-10{gap: 10px;}
+
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row
+{
+    /* center the shit out of it */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-center , .flex-center-row
+{
+    /* center the shit out of it */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.flex-center-column
+{
+    /* center the shit out of it */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Gyatt */
+.undraggable 
+{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Small Displays */
+
+.backdrop{z-index: -1;}
+.absolute{position: absolute;}
+.relative{position: relative;}
+.wrap{flex-wrap: wrap;}
+.flex { display: flex;}
+
+/* placeholder */
+
+.placeholder-1x
+{
+    background-color: gray;
+    width: 100%;
+    height: 10px;
+}
+.placeholder-10x
+{
+    background-color: gray;
+    width: 100%;
+    height: 100px;
+}
+
+.placeholder-100x
+{
+    background-color: gray;
+    width: 100%;
+    height: 1000px;
+}
+
+/* paddings */
+
+.p-5{padding: 5px;}
+.p-10{padding: 10px;}
+.p-20{padding: 20px;}
+.p-40{padding: 40px;}
+.p-50{padding: 50px;}
+.p-60{padding: 60px;}
+.p-80{padding: 80px;}
+.p-100{padding: 100px;}
+.p-150{padding: 150px;}
+.p-200{padding: 200px;}
+
+
+.p-center-100 { padding-left: 100px; padding-right: 100px}
+.p-center-150 { padding-left: 150px; padding-right: 150px}
+.p-center-200 { padding-left: 200px; padding-right: 200px}
+.p-center-250 { padding-left: 250px; padding-right: 250px}
+.p-center-300 { padding-left: 300px; padding-right: 300px}
+.p-center-350 { padding-left: 350px; padding-right: 350px}
+.p-center-400 { padding-left: 400px; padding-right: 400px}
+.p-center-450 { padding-left: 450px; padding-right: 450px}
+.p-center-500 { padding-left: 500px; padding-right: 500px}
+.p-center-550 { padding-left: 550px; padding-right: 550px}
+.p-center-600 { padding-left: 600px; padding-right: 600px}
+.p-center-650 { padding-left: 650px; padding-right: 650px}
+.p-center-700 { padding-left: 700px; padding-right: 700px}
+
+.p-left-100 { padding-left: 100px;}
+.p-left-150 { padding-left: 150px;}
+.p-left-200 { padding-left: 200px;}
+.p-left-250 { padding-left: 250px;}
+.p-left-300 { padding-left: 300px;}
+.p-left-350 { padding-left: 350px;}
+.p-left-400 { padding-left: 400px;}
+.p-left-450 { padding-left: 450px;}
+.p-left-500 { padding-left: 500px;}
+.p-left-550 { padding-left: 550px;}
+.p-left-600 { padding-left: 600px;}
+.p-left-650 { padding-left: 650px;}
+.p-left-700 { padding-left: 700px;}
+
+.p-right-100 { padding-right: 100px;}
+.p-right-150 { padding-right: 150px;}
+.p-right-200 { padding-right: 200px;}
+.p-right-250 { padding-right: 250px;}
+.p-right-300 { padding-right: 300px;}
+.p-right-350 { padding-right: 350px;}
+.p-right-400 { padding-right: 400px;}
+.p-right-450 { padding-right: 450px;}
+.p-right-500 { padding-right: 500px;}
+.p-right-550 { padding-right: 550px;}
+.p-right-600 { padding-right: 600px;}
+.p-right-650 { padding-right: 650px;}
+.p-right-700 { padding-right: 700px;}
+
+
+/* margins */
+
+.m-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.m-top-5{margin-top: 5px;}
+.m-top-10{margin-top: 10px;}
+
+.m-top-20{margin-top: 20px;}
+.m-top-40{margin-top: 40px;}
+.m-top-60{margin-top: 60px;}
+.m-top-80{margin-top: 80px;}
+
+.m-top-100{margin-top: 100px;}
+.m-top-200{margin-top: 200px;}
+.m-top-300{margin-top: 300px;}
+.m-top-400{margin-top: 400px;}
+.m-top-500{margin-top: 500px;}
+.m-top-600{margin-top: 600px;}
+.m-top-700{margin-top: 700px;}
+.m-top-800{margin-top: 800px;}
+
+/* left  */
+
+.m-left-5{margin-left: 5px;}
+.m-left-10{margin-left: 10px;}
+
+.m-left-20{margin-left: 20px;}
+.m-left-40{margin-left: 40px;}
+.m-left-60{margin-left: 60px;}
+.m-left-80{margin-left: 80px;}
+
+.m-left-100{margin-left: 100px;}
+.m-left-200{margin-left: 200px;}
+.m-left-300{margin-left: 300px;}
+.m-left-400{margin-left: 400px;}
+.m-left-500{margin-left: 500px;}
+.m-left-600{margin-left: 600px;}
+.m-left-700{margin-left: 700px;}
+.m-left-800{margin-left: 800px;}
+
+/* right */
+
+.m-right-5{margin-right: 5px;}
+.m-right-10{margin-right: 10px;}
+
+.m-right-20{margin-right: 20px;}
+.m-right-40{margin-right: 40px;}
+.m-right-60{margin-right: 60px;}
+.m-right-80{margin-right: 80px;}
+
+.m-right-100{margin-right: 100px;}
+.m-right-200{margin-right: 200px;}
+.m-right-300{margin-right: 300px;}
+.m-right-400{margin-right: 400px;}
+.m-right-500{margin-right: 500px;}
+.m-right-600{margin-right: 600px;}
+.m-right-700{margin-right: 700px;}
+.m-right-800{margin-right: 800px;}
+
+.wm-100 {max-width: 100px;}
+.wm-200 {max-width: 200px;}
+.wm-300 {max-width: 300px;}
+.wm-400 {max-width: 400px;}
+.wm-500 {max-width: 600px;}
+.wm-600 {max-width: 600px;}
+
+.width-90{width: 90%;}
+.width-80{width: 80%;}
+.width-70{width: 70%;}
+.width-60{width: 60%;}
+.width-50{width: 50%;}
+
+/* Line height */
+
+
+
+/* Who out transgender */
+
+.transY-5 {transform: translateY(5px);}
+.transY-10 {transform: translateY(10px);}
+.transY-15 {transform: translateY(15px);}
+.transY-20 {transform: translateY(20px);}
+.transY-25 {transform: translateY(25px);}
+.transY-30 {transform: translateY(30px);}
+.transY-35 {transform: translateY(35px);}
+.transY-40 {transform: translateY(40px);}
+.transY-45 {transform: translateY(45px);}
+.transY-50 {transform: translateY(50px);}
