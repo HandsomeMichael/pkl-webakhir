@@ -51,25 +51,25 @@
           <ul>
             <li>
               <a href="#" class="tooltip">
-                <img src="https://via.placeholder.com/24?text=H" alt="Home">
+                <img src="src/assets/icon/home.png" alt="Home">
                 <span class="tooltip-text">Home</span>
               </a>
             </li>
             <li>
-              <a href="#" class="tooltip">
-                <img src="https://via.placeholder.com/24?text=P" alt="Profile">
+              <a href="#saya" class="tooltip">
+                <img src="src/assets/icon/saya.png" alt="Saya">
                 <span class="tooltip-text">Saya</span>
               </a>
             </li>
             <li>
-              <a href="#" class="tooltip">
-                <img src="https://via.placeholder.com/24?text=S" alt="Settings">
+              <a href="#perusahaan" class="tooltip">
+                <img src="src/assets/icon/perusahaan.png" alt="Perusahaan">
                 <span class="tooltip-text">Perusahaan</span>
               </a>
             </li>
             <li>
-              <a href="#" class="tooltip">
-                <img src="https://via.placeholder.com/24?text=M" alt="Messages">
+              <a href="#tugas" class="tooltip">
+                <img src="src/assets/icon/tugas.png" alt="Tugas">
                 <span class="tooltip-text">Tugas</span>
               </a>
             </li>
@@ -94,7 +94,7 @@
 
       <!-- Maiself -->
 
-      <div class="flex-center wrap m-top-100 gap-50">
+      <section id="saya" class="flex-center wrap m-top-100 gap-50">
           <div data-animation="fade-in" class="relative flex-center ">
               <div class="blueball" balls-size="500"></div>
               <img width="350" height="390" class="meirl" src="src/assets/meirl new.png" alt="meirl">
@@ -113,7 +113,7 @@
                   <a href="https://www.instagram.com/michaelpastiganteng/"><img width="20px" src="src/assets/icon/instagram.svg" alt=""></a>
               </div>
           </div>
-      </div>
+      </section>
 
       <!-- BKN -->
 
@@ -128,11 +128,11 @@
           </p>
       </div>
 
-    <div class="buttong-starter" data-animation="slide-down">
+    <section id="perusahaan" class="buttong-starter" data-animation="slide-down">
         <button class="buttong" data-popup="visi">Visi</button>
         <button class="buttong" data-popup="misi">Misi</button>
         <button class="buttong" data-popup="struktur">Struktur</button>
-    </div>
+    </section>
 
       <!-- Desc -->
       <div class="flex-row m-top-100 wrap gap-20">
@@ -157,13 +157,13 @@
       </div>
 
       <!-- Pekerjaan -->
-      <div class="pekerjaan">
+      <section id="tugas" class="pekerjaan">
         <h1 class="headsup"><span style="color: transparent; -webkit-text-stroke: white 0.5px;">TUGAS</span> DIVISI</h1>
         
         <!-- Navigation -->
         <nav class="picker">
           <button>Mutasi</button>
-          <button>Tata Usaha</button>
+          <button>TU Umum</button>
           <button>Inka</button>
           <button>PDSK</button>
           <button>Pensiun</button>
@@ -174,54 +174,58 @@
           <article>
             <div class="content-text">
               <h1>Mutasi</h1>
+              <img width="90%" src="src/assets/divisi/mutasi.png" alt="">
               <p>Divisi Mutasi di BKN bertugas mengelola proses perpindahan atau penempatan
                 Aparatur Sipil Negara (ASN), termasuk promosi, rotasi, dan mutasi antardaerah atau instansi,
-                sesuai dengan peraturan yang berlaku. Kami bertugas dalam melakukan pengagendaan 
+                sesuai dengan peraturan yang berlaku.
               </p>
+              <p>Kami bertugas dalam melakukan pengagendaan KARIS dan KARSU</p>
             </div>
-            <div class="image"></div>
           </article>
-          
           <article>
             <div class="content-text">
-              <h1>Big Poo</h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+              <h1>Tata Usaha Umum</h1>
+              <img width="90%" src="src/assets/divisi/tu.png" alt="">
+              <p>Divisi TU Umum di BKN bertanggung jawab atas pengelolaan administrasi , dokumentasi dan pengelolaan umum seperti pengelolaan asset kantor
+              </p>
+              <p>Kami bertugas dalam melakukan pendataan asset kantor bkn dan juga instansi lainnya melalui aplikasi siman mobile</p>
             </div>
-            <div class="image"></div>
           </article>
-          
+
           <article>
             <div class="content-text">
-              <h1>Mauler</h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+              <h1>INKA</h1>
+              <img width="90%" src="src/assets/divisi/inka.png" alt="">
+              <p>Divisi Informasi Kepegawaian BKN mengelola data dan sistem informasi ASN untuk mendukung pengambilan keputusan, karier, dan kebijakan, serta meningkatkan efisiensi layanan kepegawaian.
+              </p>
+              <p>Kami bertugas dalam melakukan otomisasi pendataan dokumen ASN dan juga melakukan manajemen takah fisik</p>
             </div>
-            <div class="image"></div>
           </article>
+
+          <article>
+            <div class="content-text">
+              <h1>PDSK</h1>
+              <img width="90%" src="src/assets/divisi/pdsk.png" alt="">
+              <p>
+                PDSK mempunyai tugas melaksanakan pengembangan kepegawaian dan supervisi pelaksanaan Manajemen Aparatur Sipil Negara instansi di wilayah kerja Kantor Regional X BKN.
+              </p>
+              <p>Kami bertugas untuk membantu supervisi dalam pelaksanaan test CAT dan juga sosialisasi melalui media online</p>
+            </div>
+          </article>
+
+          <article>
+            <div class="content-text">
+              <h1>Pensiun</h1>
+              <img width="90%" src="src/assets/divisi/pensiun.png" alt="">
+              <p>
+                Divisi Pensiun di BKN bertugas mengelola administrasi pensiun Aparatur Sipil Negara (ASN), termasuk pengusulan, penerbitan keputusan pensiun, serta pemberian hak-hak pensiun sesuai peraturan yang berlaku.
+              </p>
+              <p>Kami bertugas dalam memanajemen takah pegawai ASN yang sudah atau akan pensiun</p>
+            </div>
+          </article>
+
         </section>
-      </div>
-
-
-      <!-- 
-      
-
-Mutasi
-Divisi Mutasi di BKN bertugas mengelola proses perpindahan atau penempatan Aparatur Sipil Negara (ASN), termasuk promosi, rotasi, dan mutasi antardaerah atau instansi, sesuai dengan peraturan yang berlaku. Kami sebagai 
-
-
-Divisi PDSK 
-
-Divisi Informasi Kepegawaian BKN mengelola data dan sistem informasi ASN untuk mendukung pengambilan keputusan, karier, dan kebijakan, serta meningkatkan efisiensi layanan kepegawaian.
-
-
-Tata Usaha
-Divisi Tata Usaha BKN bertanggung jawab atas pengelolaan administrasi, surat-menyurat, arsip, dan logistik untuk mendukung kelancaran operasional serta koordinasi internal organisasi.
-
-
-Pensiun
-Divisi Pensiun di BKN bertugas mengelola administrasi pensiun Aparatur Sipil Negara (ASN), termasuk pengusulan, penerbitan keputusan pensiun, serta pemberian hak-hak pensiun sesuai peraturan yang berlaku.
-      -->
-      
-
+      </section>
 
       <!-- Footer -->
 
