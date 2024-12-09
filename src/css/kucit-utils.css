@@ -70,10 +70,8 @@ gap, column-gap, and row-gap :  Used to create gaps or gutters between flex item
 .gap-20{gap: 20px;}
 .gap-10{gap: 10px;}
 
-.flex-column
-{
-    display: flex;
-    flex-direction: column;
+.unjustify-center{
+    justify-content: flex-start !important;
 }
 
 .flex-row

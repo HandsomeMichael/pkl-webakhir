@@ -32,50 +32,84 @@ body
     overflow-x: hidden;
 }
 
-
+.red-sub {color:#DE1D5E}
 .bg-sub {background-color: var(--clr-grayer);}
 
-/* Navbar */
-
-.kucit-navbar
+/* Sidebar */
+  
+.sidebar 
 {
-
-    /* index gotta be on top with anything */
-    z-index: 999;
-
-    /* absolute position */
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 20%;
+    left: 20px;
+    background: #0068df1a;
+    backdrop-filter: blur(15px);
 
-    /* display setup */
+    border-radius: 10px;
+    padding: 5px;
+    width: 70px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    /* Put your styles here */
-
-    backdrop-filter: blur(20px); 
-    /* background-color: var(--clr-main); */
-    transition: all .50s ease;
-    padding-left: 20px;
-    padding-right: 20px;
-    /* height: 50px; */
-
-    background-color: var(--rgb-fade-gray);
-
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.kucit-navbar.toggled
-{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(255, 255, 255, 0.5);
+.sidebar ul li a:hover {
+    color: #406ff3;
 }
 
-.kucit-navbar ul
-{
-    display: flex;
+.sidebar ul li img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
 }
+
+.sidebar ul li a:hover img {
+    transform: scale(1.4); /* Smooth size increase */
+}
+
+/* Tooltip positioning to the right with a slight tilt */
+.tooltip {
+    position: relative;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateX(40px) translateY(-50%) rotate(5deg); /* Slight tilt */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth appearance */
+    white-space: nowrap;
+}
+
+.tooltip:hover .tooltip-text {
+visibility: visible;
+opacity: 1;
+transform: translateX(30px) translateY(-50%) rotate(0); /* Remove tilt on hover */
+}
+
 
 .front-img
 {
@@ -86,7 +120,7 @@ body
     /* we will try moving these  */
     background-position-x: var(--offset-posX);
     background-position-y: var(--offset-posY);
-    transition: background-position 0.05s ease-in-out;
+    /* transition: background-position 0.05s ease-in-out; */
 
     border-radius: 8px;
     box-shadow: 0 0 5px #000000;
@@ -197,7 +231,109 @@ body
     cursor: pointer;
   }
 
-  /* Animation ahh */
+  /* Picker */
+
+.pekerjaan {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #000429;
+    padding: 10rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pekerjaan .headsup
+{
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 10%;
+}
+  
+nav.picker {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+  
+nav.picker button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+  nav.picker button:hover,
+  nav.picker button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  section.content {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  article {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  article.active {
+    left: 0;
+    opacity: 1;
+  }
+
+/* Footer */
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #000429 , #010A5B);
+}
+
+
+
+footer .front
+{
+    font-size: 7rem;
+    font-weight: 800;   
+}
+
+footer .back
+{
+    position: absolute;
+    text-align: center;
+}
+
+footer .back p
+{
+    color: transparent;
+    line-height: 0%;
+    -webkit-text-stroke: white 0.5px;
+    font-size: 5rem;
+    font-weight: 800;
+    opacity: 0.2;
+}
+
+
+
+
+
+/* Animation ahh */
 
 [data-animation] {
     opacity: 0; /* Start hidden */
@@ -247,71 +383,6 @@ body
 [data-animation="rotate-in"].appear {
     opacity: 1;
     transform: rotate(0);
-}
-
-/* Cursor */
-
-.cursor {
-    z-index: 999;
-    width: 20px;
-    height: 20px;
-    border: 1px solid white;
-    border-radius: 50%;
-    position: fixed;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    animation: cursorAnim .5s infinite alternate;
-    pointer-events: none;
-}
-
-.cursor::after {
-    z-index: 999;
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: fixed;
-    border: 8px solid gray;
-    border-radius: 50%;
-    opacity: .5;
-    top: -8px;
-    left: -8px;
-    animation: cursorAnim .5s infinite alternate;
-}
-
-@keyframes cursorAnim {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.9);
-    }
-}
-
-@keyframes cursorAnim2 {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.8);
-    }
-}
-
-@keyframes cursorAnim3 {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(3);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
-}
-
-.expand {
-    animation: cursorAnim3 .5s forwards;
-    border: 1px solid red;
 }
 
 /* Some  anim */

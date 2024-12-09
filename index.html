@@ -19,6 +19,37 @@
 
         <div class="cursor"></div>
 
+        <!-- Navbar -->
+
+        <div class="sidebar">
+            <ul>
+              <li>
+                <a href="#" class="tooltip">
+                  <img src="https://via.placeholder.com/24?text=H" alt="Home">
+                  <span class="tooltip-text">Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tooltip">
+                  <img src="https://via.placeholder.com/24?text=P" alt="Profile">
+                  <span class="tooltip-text">Saya</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tooltip">
+                  <img src="https://via.placeholder.com/24?text=S" alt="Settings">
+                  <span class="tooltip-text">Perusahaan</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tooltip">
+                  <img src="https://via.placeholder.com/24?text=M" alt="Messages">
+                  <span class="tooltip-text">Tugas</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
         <!-- Frontpage -->
 
         <div class="flex-center-column text-center m-top-60">
@@ -71,27 +102,30 @@
         <!-- BKN -->
 
         <div class="flex-center-column m-top-100">
-            <img width="80%" src="src/assets/kanreg bkn.png" alt="">
-            <h1>KANTOR REGIONAL X BKN</h1>
-            <p class="p-center-300">
+            <img data-animation="fade-in" width="80%" src="src/assets/kanreg bkn.png" alt="">
+            <h1 data-animation="slide-in" >KANTOR REGIONAL <span class="red-sub">X</span> BKN</h1>
+            <p data-animation="slide-in"  class="p-center-300">
                 Dari yang kami pelajari , Kantor Regional X Badan Kepegawaian Negara (Kanreg X BKN) di Denpasar adalah salah satu unit kerja BKN yang bertugas mendukung pelaksanaan manajemen kepegawaian di wilayah kerjanya, khususnya di Provinsi Bali, NTB, dan NTT.
             </p>
-            <p class="p-center-300">
+            <p data-animation="slide-in" class="p-center-300">
                 Kantor Regional X BKN Denpasar dibentuk berdasarkan Perka BKN No. 14 Tahun 2006, sebagai tindak lanjut persetujuan MENPAN No. B/761/M.PAN/3/2006, bersama dengan Kanreg XI BKN Manado dan Kanreg XII BKN Pekanbaru. Tujuannya adalah meningkatkan pelayanan administrasi, pengawasan, dan pengendalian kepegawaian secara efektif dan efisien.
             </p>
         </div>
 
-        <div class="flex-row m-top-100">
-            <div class="flex-center-column wrap">
-                <img width="400px" src="src/assets/pkl ngapain 2.jpg" alt="">
+        <!-- Desc -->
+        <div class="flex-row m-top-100 wrap gap-20">
+            <div class="flex-center-column unjustify-center wrap">
+              <div class="blueball" balls-size="400"></div>
+                <img width="400px" src="src/assets/pkl 1.png" alt="">
                 <h1>Sistem PKL</h1>
                 <div style="width: 400px;">
                     <p>Kami melakukan PKL disini menggunakan sistem rolling divisi dimana setiap bulannya, Setiap anggota prakrin akan bertukar divisi kerja.</p>
                 <p>Hal ini dilaksanakan untuk pemerataan jumlah anggota prakrin di tiap divisi dan juga sekaligus memberi pengetahuan lebih mendalam mengenai tiap divisi yang ada</p>
                 </div>
             </div>
-            <div class="flex-center-column wrap">
-                <img width="400px" src="src/assets/pkl ngapain 2.jpg" alt="">
+            <div class="flex-center-column unjustify-center wrap">
+              <div class="blueball" balls-size="400"></div>
+                <img width="400px" src="src/assets/pkl 2.png" alt="">
                 <h1>Tujuan PKL</h1>
                 <div style="width: 400px;">
                     <p>Tentu saja tujuan kami prakrin disini adalah menambah dan memperdalam ilmu industri</p>
@@ -99,9 +133,61 @@
                 </div>
             </div>
         </div>
+
+        <!-- Pekerjaan -->
+
+        <div class="pekerjaan">
+          <h1 class="headsup"><span style="color: transparent; -webkit-text-stroke: white 0.5px;">TUGAS</span> DIVISI</h1>
+          
+          <!-- Navigation -->
+          <nav class="picker">
+            <button>Mutasi</button>
+            <button>Big Poo</button>
+            <button>Mauler</button>
+          </nav>
+          
+          <!-- Content Sections -->
+          <section class="content">
+            <article>
+              <div class="content-text">
+                <h1>Mutasi</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+              </div>
+              <div class="image"></div>
+            </article>
+            
+            <article>
+              <div class="content-text">
+                <h1>Big Poo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+              </div>
+              <div class="image"></div>
+            </article>
+            
+            <article>
+              <div class="content-text">
+                <h1>Mauler</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+              </div>
+              <div class="image"></div>
+            </article>
+          </section>
+        </div>
         
 
-        <!-- Secondary Contents -->
+
+        <!-- Footer -->
+
+        <footer>
+          <div class="back">
+            <p>FOR LISTENING</p>
+            <p>FOR TUNING IN</p>
+            <p>FOR WATCHING</p>
+          </div>
+          <p class="front">THANKS.</p>
+          <p class="credit">@Copyright 2024 Michael</p>
+        </footer>
+
 
         <!-- Summon scripts -->
         <script src="src/js/script.js"></script>

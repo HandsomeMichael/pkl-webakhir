@@ -4,7 +4,6 @@
 const navbarScrollY = 60;
 const navbar = document.querySelector(".kucit-navbar");
 const frontimages = document.querySelectorAll('.front-img');
-const cursor = document.querySelector('.cursor');
 
 window.addEventListener("scroll", function() 
 {
@@ -13,6 +12,14 @@ window.addEventListener("scroll", function()
     {
         navbar.classList.toggle("toggled", window.scrollY > navbarScrollY);
     }
+
+    frontimages.forEach((pagefront) => {
+        // Get the bounding rectangle of target
+        const rect = pagefront.getBoundingClientRect();
+        const math = this.window.scrollY * 0.2 
+
+        pagefront.style.setProperty('--offset-posX',`-${math}px`);
+    });
 });
 
 const observer = new IntersectionObserver((entries) => {
@@ -22,49 +29,42 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
+  
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    // Gugugaga
     const elements = document.querySelectorAll("[data-animation]");
     elements.forEach(element => {
         const delay = element.getAttribute("data-animation-delay") || "0s";
         element.style.transitionDelay = delay;
     });
+
+    // Pekerjaan
+    const picker = document.querySelector("nav.picker");
+    const buttons = picker.children; // Get button list
+    const articles = document.querySelector(".content").children; // Get content list
+  
+    Array.from(buttons).forEach((button, index) => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons and articles
+        Array.from(buttons).forEach(btn => btn.classList.remove("active"));
+        Array.from(articles).forEach(article => article.classList.remove("active"));
+  
+        // Add 'active' class to the clicked button and corresponding article
+        button.classList.add("active");
+        articles[index].classList.add("active");
+      });
+    });
+  
+    // Initialize: activate the first button and article
+    buttons[0].classList.add("active");
+    articles[0].classList.add("active");
 });
 
 // Observe all elements with the 'fade-in' class
 document.querySelectorAll("[data-animation]").forEach((el) => observer.observe(el));
 document.querySelectorAll("out-of-focus").forEach((el) => observer.observe(el));
-
-
-document.addEventListener('click', () => {
-    cursor.classList.add("expand");
-    setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 500)
-})
-
-// Mouse listener 
-document.addEventListener('mousemove', (e) => 
-{
-    // Custom cursor
-    cursor.setAttribute("style", "top: "+(e.clientY - 10)+"px; left: "+(e.clientX - 10)+"px;")
-
-    // Parallax
-    if (window.scrollY > 300) return;
-
-    frontimages.forEach((pagefront) => {
-        // Get the bounding rectangle of target
-        const rect = pagefront.getBoundingClientRect();
-        // Mouse position
-        const offsetPixelX = 5;
-        const offsetPixelY = 3;
-        const offsetRatioX = 1 - (e.clientX - rect.left) / rect.width;
-        const offsetRatioY = 1 - (e.clientY - rect.top) / rect.height;
-
-        pagefront.style.setProperty('--offset-posX',`${offsetRatioX * offsetPixelX}px`);
-        pagefront.style.setProperty('--offset-posY',`${offsetRatioY * offsetPixelY}px`);
-    });
-});
 
 // Function to initialize blue balls with modular attributes
 document.querySelectorAll(".blueball").forEach((ball) => {
