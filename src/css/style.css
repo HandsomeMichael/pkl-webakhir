@@ -262,7 +262,7 @@ nav.picker button {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: white;
+    background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -294,7 +294,118 @@ nav.picker button {
     opacity: 1;
   }
 
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0px);
+    z-index: 9998;
+    opacity: 0;
+}
 
+.popup-overlay.active {
+    animation: blurIn 0.5s forwards;
+}
+
+.popup-overlay.closing {
+    animation: blurOut 0.5s forwards;
+}
+
+/* Popup Styles */
+
+.popup > * 
+{
+    color: #000000;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.popup.active {
+    animation: fadeInUp 0.5s forwards;
+}
+
+.popup.closing {
+    animation: fadeOutDown 0.5s forwards;
+}
+
+/* Keyframes for Blur Animation */
+@keyframes blurIn {
+    0% {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        visibility: visible; /* Ensure it's visible at the start */
+    }
+    100% {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+    }
+}
+
+@keyframes blurOut {
+    0% {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+    }
+    100% {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        visibility: hidden; /* Make it hidden at the end */
+    }
+}
+
+/* Keyframes for Popup Fade In/Out */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        /* transform: translate(-50%, -70%); */
+        visibility: visible; /* Ensure it's visible at the start */
+    }
+    100% {
+        opacity: 1;
+        /* transform: translate(-50%, -50%); */
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        /* transform: translate(-50%, -50%); */
+    }
+    100% {
+        opacity: 0;
+        /* transform: translate(-50%, -60%); */
+        visibility: hidden; /* Make it hidden at the end */
+    }
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
   
 /* Footer */
 

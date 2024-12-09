@@ -1,195 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
+      <!-- Base HTML -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Kantor Negara</title>
 
-        <!-- Base HTML -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kantor Negara</title>
+      <!-- Styles -->
+      <link rel="stylesheet" href="src/css/kucit-utils.css">
+      <link rel="stylesheet" href="src/css/style.css">
+  </head>
+  <body>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="src/css/kucit-utils.css">
-        <link rel="stylesheet" href="src/css/style.css">
+      <!-- Popup -->
 
-    </head>
+      <div class="popup-overlay closing"></div>
 
-    <body>
+      <div class="popup closing" id="visi">
+        <button class="close-btn">&times;</button>
+        <h1>Shutup</h1>
+        <p>gottayumgottayumgottayumgottayumgottayumgottayumgottayumgottayumgottayum</p>
+      </div>
 
-        <!-- Mouse -->
+      <div class="popup closing" id="misi">
+        <button class="close-btn">&times;</button>
+        <h1>Shutup2</h1>
+        <p>gottayumgottayumgottayumgottayumgottayumgottayumgottayumgottayumgottayum</p>
+      </div>
 
-        <div class="cursor"></div>
+      <button data-popup="visi">Visi</button>
+      <button data-popup="misi">Misi</button>
+      
 
-        <!-- Navbar -->
+      <!-- Navbar -->
 
-        <div class="sidebar">
-            <ul>
-              <li>
-                <a href="#" class="tooltip">
-                  <img src="https://via.placeholder.com/24?text=H" alt="Home">
-                  <span class="tooltip-text">Home</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tooltip">
-                  <img src="https://via.placeholder.com/24?text=P" alt="Profile">
-                  <span class="tooltip-text">Saya</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tooltip">
-                  <img src="https://via.placeholder.com/24?text=S" alt="Settings">
-                  <span class="tooltip-text">Perusahaan</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tooltip">
-                  <img src="https://via.placeholder.com/24?text=M" alt="Messages">
-                  <span class="tooltip-text">Tugas</span>
-                </a>
-              </li>
-            </ul>
+      <div class="sidebar">
+          <ul>
+            <li>
+              <a href="#" class="tooltip">
+                <img src="https://via.placeholder.com/24?text=H" alt="Home">
+                <span class="tooltip-text">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="tooltip">
+                <img src="https://via.placeholder.com/24?text=P" alt="Profile">
+                <span class="tooltip-text">Saya</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="tooltip">
+                <img src="https://via.placeholder.com/24?text=S" alt="Settings">
+                <span class="tooltip-text">Perusahaan</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="tooltip">
+                <img src="https://via.placeholder.com/24?text=M" alt="Messages">
+                <span class="tooltip-text">Tugas</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      <!-- Frontpage -->
+
+      <div class="flex-center-column text-center m-top-60">
+          <h2 class="text-noline swipe-down-4s" style="line-height: 0%;"> PRAKTEK KERJA DI</h2>
+          <img class="width-50 swipe-down-2s " src="src/assets/text-1-revisi.svg" alt="Logo Kanreg">
+          <div class="random-strip"></div>
+          <div class="random-strip-2"></div>
+          <div class="blueball"></div>
+          <div class="flex-center-row m-top-20 gap-20">
+              <div class="swipe-right-2s front-img" style="background-image: url('src/assets/front-page-1.jpg');"></div>
+              <div class="swipe-right-4s front-img" style="background-image: url('src/assets/front-page-2.jpg');"></div>
+              <div class="swipe-right-6s front-img" style="background-image: url('src/assets/front-page-3.jpg');"></div>
           </div>
-
-        <!-- Frontpage -->
-
-        <div class="flex-center-column text-center m-top-60">
-            <h2 class="text-noline swipe-down-4s" style="line-height: 0%;"> PRAKTEK KERJA DI</h2>
-            <img class="width-50 swipe-down-2s " src="src/assets/text-1-revisi.svg" alt="Logo Kanreg">
-            <div class="random-strip"></div>
-            <div class="random-strip-2"></div>
-            <div class="blueball"></div>
-            <div class="flex-center-row m-top-20 gap-20">
-                <div class="swipe-right-2s front-img" style="background-image: url('src/assets/front-page-1.jpg');"></div>
-                <div class="swipe-right-4s front-img" style="background-image: url('src/assets/front-page-2.jpg');"></div>
-                <div class="swipe-right-6s front-img" style="background-image: url('src/assets/front-page-3.jpg');"></div>
-            </div>
-            
-        </div>
-
-        <!-- Buttons -->
-
-        <div class="buttong-starter" data-animation="slide-down">
-            
-            <div class="buttong">Saya</div>
-            <div class="buttong">Perusahaan</div>
-            <div class="buttong">Kegiatan</div>
-            <div class="buttong">Kesimpulan</div>
-        </div>
-
-        <!-- Maiself -->
-
-        <div class="flex-center wrap m-top-100 gap-50">
-            <div data-animation="fade-in" class="relative flex-center ">
-                <div class="blueball" balls-size="500"></div>
-                <img width="350" height="390" class="meirl" src="src/assets/meirl new.png" alt="meirl">
-            </div>
-            <div data-animation="zoom-in" class="flex-column">
-                <h1 class="text-noline bigasstext1">Michael</h1>
-                <h1 class="text-noline bigasstext2">Hayato</h1>
-
-                <div class="">
-                    <p class="bigasstextdesc">Nama saya Michael Hayato Abdillah Hadjar Prajudy dan saya merupakan siswa kelas 11 SMK TI Bali Global Denpasar.</p>
-                    <p class="bigasstextdesc">Saya berbidang di rekayasa perangkat lunak dimana kami mempelajari penggunaan , proses dan pembuatan perangkat lunak.</p>
-                </div>
-
-                <div class="flex gap-10 m-top-10">
-                    <a href="https://github.com/HandsomeMichael"><img width="20px" src="src/assets/icon/github.svg" alt=""></a>
-                    <a href="https://www.instagram.com/michaelpastiganteng/"><img width="20px" src="src/assets/icon/instagram.svg" alt=""></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- BKN -->
-
-        <div class="flex-center-column m-top-100">
-            <img data-animation="fade-in" width="80%" src="src/assets/kanreg bkn.png" alt="">
-            <h1 data-animation="slide-in" >KANTOR REGIONAL <span class="red-sub">X</span> BKN</h1>
-            <p data-animation="slide-in"  class="p-center-300">
-                Dari yang kami pelajari , Kantor Regional X Badan Kepegawaian Negara (Kanreg X BKN) di Denpasar adalah salah satu unit kerja BKN yang bertugas mendukung pelaksanaan manajemen kepegawaian di wilayah kerjanya, khususnya di Provinsi Bali, NTB, dan NTT.
-            </p>
-            <p data-animation="slide-in" class="p-center-300">
-                Kantor Regional X BKN Denpasar dibentuk berdasarkan Perka BKN No. 14 Tahun 2006, sebagai tindak lanjut persetujuan MENPAN No. B/761/M.PAN/3/2006, bersama dengan Kanreg XI BKN Manado dan Kanreg XII BKN Pekanbaru. Tujuannya adalah meningkatkan pelayanan administrasi, pengawasan, dan pengendalian kepegawaian secara efektif dan efisien.
-            </p>
-        </div>
-
-        <!-- Desc -->
-        <div class="flex-row m-top-100 wrap gap-20">
-            <div class="flex-center-column unjustify-center wrap">
-              <div class="blueball" balls-size="400"></div>
-                <img width="400px" src="src/assets/pkl 1.png" alt="">
-                <h1>Sistem PKL</h1>
-                <div style="width: 400px;">
-                    <p>Kami melakukan PKL disini menggunakan sistem rolling divisi dimana setiap bulannya, Setiap anggota prakrin akan bertukar divisi kerja.</p>
-                <p>Hal ini dilaksanakan untuk pemerataan jumlah anggota prakrin di tiap divisi dan juga sekaligus memberi pengetahuan lebih mendalam mengenai tiap divisi yang ada</p>
-                </div>
-            </div>
-            <div class="flex-center-column unjustify-center wrap">
-              <div class="blueball" balls-size="400"></div>
-                <img width="400px" src="src/assets/pkl 2.png" alt="">
-                <h1>Tujuan PKL</h1>
-                <div style="width: 400px;">
-                    <p>Tentu saja tujuan kami prakrin disini adalah menambah dan memperdalam ilmu industri</p>
-                    <p>khususnya dizaman sekarang dimana masih ada banyak siswa atau siswi yang masih belum mengetahui sistem kerja kepegawaian negara</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pekerjaan -->
-        <div class="pekerjaan">
-          <h1 class="headsup"><span style="color: transparent; -webkit-text-stroke: white 0.5px;">TUGAS</span> DIVISI</h1>
           
-          <!-- Navigation -->
-          <nav class="picker">
-            <button>Mutasi</button>
-            <button>Big Poo</button>
-            <button>Mauler</button>
-          </nav>
+      </div>
+
+      <!-- Maiself -->
+
+      <div class="flex-center wrap m-top-100 gap-50">
+          <div data-animation="fade-in" class="relative flex-center ">
+              <div class="blueball" balls-size="500"></div>
+              <img width="350" height="390" class="meirl" src="src/assets/meirl new.png" alt="meirl">
+          </div>
+          <div data-animation="zoom-in" class="flex-column">
+              <h1 class="text-noline bigasstext1">Michael</h1>
+              <h1 class="text-noline bigasstext2">Hayato</h1>
+
+              <div class="">
+                  <p class="bigasstextdesc">Nama saya Michael Hayato Abdillah Hadjar Prajudy dan saya merupakan siswa kelas 11 SMK TI Bali Global Denpasar.</p>
+                  <p class="bigasstextdesc">Saya berbidang di rekayasa perangkat lunak dimana kami mempelajari penggunaan , proses dan pembuatan perangkat lunak.</p>
+              </div>
+
+              <div class="flex gap-10 m-top-10">
+                  <a href="https://github.com/HandsomeMichael"><img width="20px" src="src/assets/icon/github.svg" alt=""></a>
+                  <a href="https://www.instagram.com/michaelpastiganteng/"><img width="20px" src="src/assets/icon/instagram.svg" alt=""></a>
+              </div>
+          </div>
+      </div>
+
+      <!-- BKN -->
+
+      <div class="flex-center-column m-top-100">
+          <img data-animation="fade-in" width="80%" src="src/assets/kanreg bkn.png" alt="">
+          <h1 data-animation="slide-in" >KANTOR REGIONAL <span class="red-sub">X</span> BKN</h1>
+          <p data-animation="slide-in"  class="p-center-300">
+              Dari yang kami pelajari , Kantor Regional X Badan Kepegawaian Negara (Kanreg X BKN) di Denpasar adalah salah satu unit kerja BKN yang bertugas mendukung pelaksanaan manajemen kepegawaian di wilayah kerjanya, khususnya di Provinsi Bali, NTB, dan NTT.
+          </p>
+          <p data-animation="slide-in" class="p-center-300">
+              Kantor Regional X BKN Denpasar dibentuk berdasarkan Perka BKN No. 14 Tahun 2006, sebagai tindak lanjut persetujuan MENPAN No. B/761/M.PAN/3/2006, bersama dengan Kanreg XI BKN Manado dan Kanreg XII BKN Pekanbaru. Tujuannya adalah meningkatkan pelayanan administrasi, pengawasan, dan pengendalian kepegawaian secara efektif dan efisien.
+          </p>
+      </div>
+
+      <div class="buttong-starter" data-animation="slide-down">
           
-          <!-- Content Sections -->
-          <section class="content">
-            <article>
-              <div class="content-text">
-                <h1>Mutasi</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+        <div class="buttong">Visi</div>
+        <div class="buttong">Misi</div>
+        <div class="buttong">Struktur</div>
+    </div>
+
+      <!-- Desc -->
+      <div class="flex-row m-top-100 wrap gap-20">
+          <div class="flex-center-column unjustify-center wrap">
+            <div class="blueball" balls-size="400"></div>
+              <img width="400px" src="src/assets/pkl 1.png" alt="">
+              <h1>Sistem PKL</h1>
+              <div style="width: 400px;">
+                  <p>Kami melakukan PKL disini menggunakan sistem rolling divisi dimana setiap bulannya, Setiap anggota prakrin akan bertukar divisi kerja.</p>
+              <p>Hal ini dilaksanakan untuk pemerataan jumlah anggota prakrin di tiap divisi dan juga sekaligus memberi pengetahuan lebih mendalam mengenai tiap divisi yang ada</p>
               </div>
-              <div class="image"></div>
-            </article>
-            
-            <article>
-              <div class="content-text">
-                <h1>Big Poo</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+          </div>
+          <div class="flex-center-column unjustify-center wrap">
+            <div class="blueball" balls-size="400"></div>
+              <img width="400px" src="src/assets/pkl 2.png" alt="">
+              <h1>Tujuan PKL</h1>
+              <div style="width: 400px;">
+                  <p>Tentu saja tujuan kami prakrin disini adalah menambah dan memperdalam ilmu industri</p>
+                  <p>khususnya dizaman sekarang dimana masih ada banyak siswa atau siswi yang masih belum mengetahui sistem kerja kepegawaian negara</p>
               </div>
-              <div class="image"></div>
-            </article>
-            
-            <article>
-              <div class="content-text">
-                <h1>Mauler</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
-              </div>
-              <div class="image"></div>
-            </article>
-          </section>
-        </div>
+          </div>
+      </div>
+
+      <!-- Pekerjaan -->
+      <div class="pekerjaan">
+        <h1 class="headsup"><span style="color: transparent; -webkit-text-stroke: white 0.5px;">TUGAS</span> DIVISI</h1>
         
+        <!-- Navigation -->
+        <nav class="picker">
+          <button>Mutasi</button>
+          <button>Tata Usaha</button>
+          <button>Inka</button>
+          <button>PDSK</button>
+          <button>Pensiun</button>
+        </nav>
+        
+        <!-- Content Sections -->
+        <section class="content">
+          <article>
+            <div class="content-text">
+              <h1>Mutasi</h1>
+              <p>Divisi Mutasi di BKN bertugas mengelola proses perpindahan atau penempatan
+                Aparatur Sipil Negara (ASN), termasuk promosi, rotasi, dan mutasi antardaerah atau instansi,
+                sesuai dengan peraturan yang berlaku. Kami bertugas dalam  
+              </p>
+            </div>
+            <div class="image"></div>
+          </article>
+          
+          <article>
+            <div class="content-text">
+              <h1>Big Poo</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+            </div>
+            <div class="image"></div>
+          </article>
+          
+          <article>
+            <div class="content-text">
+              <h1>Mauler</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates officia autem facere tempore aspernatur velit omnis.</p>
+            </div>
+            <div class="image"></div>
+          </article>
+        </section>
+      </div>
 
 
-        <!-- Footer -->
+      <!-- 
+      
 
-        <footer>
-          <div class="back">
-            <p>FOR LISTENING</p>
-            <p>FOR TUNING IN</p>
-            <p>FOR WATCHING</p>
-          </div>
-          <p class="front">THANKS.</p>
-          <p class="credit">@Copyright 2024 Michael</p>
-        </footer>
+Mutasi
+Divisi Mutasi di BKN bertugas mengelola proses perpindahan atau penempatan Aparatur Sipil Negara (ASN), termasuk promosi, rotasi, dan mutasi antardaerah atau instansi, sesuai dengan peraturan yang berlaku. Kami sebagai 
 
 
-        <!-- Summon scripts -->
-        <script src="src/js/script.js"></script>
-    </body>
+Divisi PDSK 
 
+Divisi Informasi Kepegawaian BKN mengelola data dan sistem informasi ASN untuk mendukung pengambilan keputusan, karier, dan kebijakan, serta meningkatkan efisiensi layanan kepegawaian.
+
+
+Tata Usaha
+Divisi Tata Usaha BKN bertanggung jawab atas pengelolaan administrasi, surat-menyurat, arsip, dan logistik untuk mendukung kelancaran operasional serta koordinasi internal organisasi.
+
+
+Pensiun
+Divisi Pensiun di BKN bertugas mengelola administrasi pensiun Aparatur Sipil Negara (ASN), termasuk pengusulan, penerbitan keputusan pensiun, serta pemberian hak-hak pensiun sesuai peraturan yang berlaku.
+      -->
+      
+
+
+      <!-- Footer -->
+
+      <footer>
+        <div class="back">
+          <p>FOR LISTENING</p>
+          <p>FOR TUNING IN</p>
+          <p>FOR WATCHING</p>
+        </div>
+        <p class="front">THANKS.</p>
+        <p class="credit">@Copyright 2024 Michael</p>
+      </footer>
+
+      <!-- Summon scripts -->
+      <script src="src/js/script.js"></script>
+
+  </body>
 </html>

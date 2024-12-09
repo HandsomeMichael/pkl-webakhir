@@ -29,7 +29,48 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-  
+
+function init_popup()
+{
+    const overlay = document.querySelector('.popup-overlay');
+    const popups = document.querySelectorAll('.popup');
+    const popupButtons = document.querySelectorAll('button[data-popup]');
+
+    // Function to show popup
+    const showPopup = (id) => {
+        const targetPopup = document.getElementById(id);
+        if (targetPopup) {
+            overlay.classList.remove('closing');
+            targetPopup.classList.remove('closing');
+
+            overlay.classList.add('active');
+            targetPopup.classList.add('active');
+        }
+    };
+
+    // Function to hide popup
+    const hidePopups = () => {
+        overlay.classList.add('closing');
+        popups.forEach((popup) => popup.classList.add('closing'));
+    };
+
+    // Attach click events to popup buttons
+    popupButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-popup');
+            showPopup(targetId);
+        });
+    });
+
+    // Attach click events to close buttons
+    popups.forEach((popup) => {
+        const closeButton = popup.querySelector('.close-btn');
+        closeButton.addEventListener('click', hidePopups);
+    });
+
+    // Close popup when clicking the overlay
+    overlay.addEventListener('click', hidePopups);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -39,6 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const delay = element.getAttribute("data-animation-delay") || "0s";
         element.style.transitionDelay = delay;
     });
+
+    //  Popups
+
+    init_popup();
 
     // Pekerjaan
     const picker = document.querySelector("nav.picker");
@@ -78,3 +123,4 @@ document.querySelectorAll(".blueball").forEach((ball) => {
     ball.style.background = `radial-gradient(circle, ${color} 0%, rgba(0, 123, 255, 0) 70%)`;
     ball.style.opacity = opacity;
 });
+
