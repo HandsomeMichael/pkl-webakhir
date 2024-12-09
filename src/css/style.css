@@ -294,6 +294,8 @@ nav.picker button {
     opacity: 1;
   }
 
+
+  /* Jomok Popup */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -325,7 +327,7 @@ nav.picker button {
     display: flex;
     flex-direction: column;
     position: fixed;
-    align-self: center;
+    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -336,6 +338,12 @@ nav.picker button {
     z-index: 9999;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
+}
+
+.ishidden
+{
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 
 .popup.active {

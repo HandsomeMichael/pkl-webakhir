@@ -39,7 +39,11 @@ function init_popup()
     // Function to show popup
     const showPopup = (id) => {
         const targetPopup = document.getElementById(id);
-        if (targetPopup) {
+        if (targetPopup) 
+        {
+            overlay.classList.remove('ishidden');
+            targetPopup.classList.remove('ishidden');
+
             overlay.classList.remove('closing');
             targetPopup.classList.remove('closing');
 
